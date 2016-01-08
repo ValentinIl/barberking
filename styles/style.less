@@ -107,6 +107,7 @@ footer{
 		a.logo{
 			float: left;
 			margin: 26px 0;
+			cursor: pointer;
 
 			img{
 				margin-top: 5px;
@@ -123,8 +124,14 @@ footer{
 
 			li{
 				float: left;
-				margin: 36px 20px;
+				margin: 36px 0 36px 40px;
 				font-size: 0.875rem;
+
+				a{
+					&:hover {
+						background-color: @design_color;
+					}
+				}
 			}
 		}
 	}
@@ -167,8 +174,7 @@ footer{
 #about{
 	h3{
 		float: left;
-		margin-right: 20px;
-		width: 31.655%;
+		width: 35%;
 
 		&:before{
 			display: block;
@@ -183,7 +189,7 @@ footer{
 	p{
 		float: right;
 		margin-left: 10px;
-		width: 31.655%;
+		width: 30%;
 		line-height: 1.625rem;
 	}
 }
@@ -224,7 +230,7 @@ footer{
 		margin-right: 1%;
 
 		h3{
-			height: 25vh;
+			height: 170px;
 
 			span{
 				font-weight: normal;
@@ -245,7 +251,6 @@ footer{
 }
 
 #reservation{
-	
 	.row{
 
 		.left{
@@ -265,7 +270,7 @@ footer{
 		
 			textarea{
 				width: 100%;
-				height: 225px;
+				height: 236px;
 				padding: 10px;
 				resize: none;
 			}
@@ -335,3 +340,116 @@ footer{
 
 /*------state------*/
 
+@media(min-width: 1280px){
+	body{
+		font-size: 1.5rem;
+
+		h5{
+			font-size: 2rem;
+		}
+
+		header,
+		footer{
+			div ul.nav li{
+				font-size: 1.5rem;
+			}
+		}		
+	}
+}
+
+@media(max-width: 860px){
+	header,
+	footer{
+		div ul.nav li{
+			margin-left: 10px;
+		}
+	}
+
+	.main h3 {
+		right: -12vw;
+	}
+
+	#about{
+		h3,
+		p{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	#services div {
+		width: 100%;
+
+		h3{
+			height: inherit;
+		}
+	}
+}
+
+@media(max-width: 736px), (max-height: 480px){
+	header,
+	footer{
+
+		nav{
+			display: inline-block;
+
+			ul.nav li{
+				margin: 0 12px 26px;
+			}
+		}
+	}
+
+	.main h3 {
+		right: -7vw;
+		width: 280px;
+		font-size: 2rem;
+	}
+}
+
+@media(max-width: 480px), (max-height: 350px){
+	h2{
+		display: none;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	.head div h1 {
+		font-size: 4rem;
+	}
+
+	.main h3 {
+		right: -9vw;
+		font-size: 2rem;
+		width: 250px;
+		bottom: 25vh;
+	}
+
+	#reservation .row{
+		.left,
+		.right{
+			width: 100%;
+		}
+	}
+}
+
+@media(max-width: 375px), (max-height: 275px){
+	#contacts{
+		iframe{
+			display: none;
+		}
+
+		.tooltip{
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+
+			&:after,
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
